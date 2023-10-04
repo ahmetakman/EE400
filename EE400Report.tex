@@ -1,0 +1,735 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{tabularx} % extra features for tabular environment
+\usepackage{amsmath}  % improve math presentation
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{cite}
+\usepackage{multicol}
+\usepackage{graphicx} % takes care of graphic including machinery
+\graphicspath{ {./figures/} }
+%\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+%\usepackage{cite} % takes care of citations
+\usepackage[final]{hyperref} % adds hyperlinks inside the generated pdf file
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,        % color of internal links
+    citecolor=blue,        % color of links to bibliography
+    filecolor=magenta,     % color of file links
+    urlcolor =blue         
+}
+\usepackage[margin = 1in,headsep=0.5cm,headheight=2cm,letterpaper]{geometry} 
+\usepackage{subcaption}
+
+\usepackage{fancyhdr}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+
+
+\pagestyle{fancy}
+\lhead{Intern: Ahmet Akman 2442366  \\ Supervisor: Tufan Albayrak}
+%\rhead{Date: \today \\ Duration: 19.07.22-21.08.22} 
+%\cfoot{center of the footer!}
+\renewcommand{\headrulewidth}{0.1pt}
+
+\title{
+\includegraphics[width=17cm]{odtu.png} \\
+\includegraphics[width=4cm]{eee.png} \\
+\vspace*{0.5in}
+\textbf{EE300 Summer Practice Report}
+\vspace*{0.25in}
+}
+
+\author{Intern: Ahmet Akman 2442366\\
+Supervisor: Tufan Albayrak\\
+Supervisor Contact: \href{mailto:tufan.albayrak@esensi.com.tr}{tufan.albayrak@esensi.com.tr}-\href{tel:+905054899258}{+905054899258}\\
+Assigned Faculty Member: Fatih Kamışlı\\
+Company Name: Esen System Integration\\
+Start date:19.08.2022 || End date: 13.08.2022\\
+        \vspace*{0.25in} \\
+        Electrical and Electronics Engineering Department\\
+        \textbf{Middle East Technical University}\\
+        Ankara, Turkey
+       } \date{\today}
+
+
+\begin{document}
+
+\bibliographystyle{plain}
+
+%\thispagestyle{empty}
+
+% \title{Fall 2022 EE300 Summer Practice Report  \protect\\ ESEN Sistem Entegrasyon Aş.}
+
+% \author{Ahmet Akman 2442366 \protect\\ Supervisor: Tufan Albayrak}
+% \date{\today}
+\includepdf[pages=-]{coverpage_signed.pdf}
+
+
+%\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+%\begin{abstract}
+%abstract
+%\end{abstract}
+\section{Introduction}
+\section{About Company}
+\subsection{Company Name}
+Esen Sistem Entegrasyon ve Müh. Hiz. San. Ve Tic. Ltd. Şti.
+\subsection{Company Location}
+Üniversiteler Mahallesi, İhsan Doğramacı Bulvarı 37/3 Titanyum C Blok Kat 2, ODTÜ Teknokent, 06800, Çankaya, Ankara, Türkiye
+\subsection{General Description}
+ESEN System Integration is an engineering company that aims to build fast and
+innovative solutions to the electronics, aerospace, and defense industry. In essential partnership with US-based Sierra Nevada Corporation, the company was established in February 2012 and is operating at METU Technology development area. The company has been focused on creating infrastructure with the participation of experienced engineers, and as a result, ESEN System Integration has been certified with ISO 9001:2008 Quality Management System. Also, ESEN System Integration developed its software development and system engineering processes by CMMI v1.3 Maturity Level 3 and DO-178C requirements, and ongoing projects are implemented according to these processes.
+ESEN System Integration has the following memberships to incorporate with the other companies:
+\begin{itemize}
+    \item  Savunma Sanayii İmalatçılar Derneği (SASAD)
+    \item Turkish American Business Association (TABA)
+    \item Teknokent Savunma Sanayii Kümelenmesi (TSSK)
+\end{itemize}
+
+The milestones declared by the company are given in Figure \ref{esen_milstone} (in Turkish)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{esen_milestones.png}
+    \caption{Milestones over ten years of operation.}
+    \label{esen_milstone}
+\end{figure} 
+    
+\subsubsection{Organization Structure}
+The company's organizational structure is given in Figure \ref*{esen_str}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{organizational_str.png}
+    \caption{Company structure.}
+    \label{esen_str}
+\end{figure} 
+The hierarchical structure can be considered very simple. This is because the company uses a software development management framework called scrum. Scum enables that there are no strong hierarchical positions in the company. Although there is no hierarchy, some employers are chosen as team leaders and technical leaders, who have no superiority over employers. They are chosen according to their experience. The general manager of the company is Cem UĞUR. I completed my internship under the director of space and sensing systems, Erol Tunalı. I worked with the vision team of the GÖRDES project. My team leader was Mustafa Yaman, Ph.D. Lastly, my supervisor was Tufan Albayrak, who has been working at ESEN for eight years and graduated from TOBB ETU Electrical and Electronics Engineering Department.
+
+\subsubsection{Employement}
+Esen System employs more than 200 as of 2022, and Figure \ref*{esen_nb} shows the number of employees over the years as of 2021. It can be inferred from the figure that the company is expanding its human resources portfolio steadily. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{employer_nb.png}
+    \caption{Number of employees over the years.}
+    \label{esen_nb}
+\end{figure} 
+
+Figure \ref*{esen_stat} shows some statistics about employment at the company. Since Esen is mainly an engineering company, 80 \% of the employees are engineers. When it comes to the experience distribution of the company, it can be said that it is quite balanced, and the most experienced group creates the most significant portion. Lastly, the education profile of the company states that employees with bachelor's degrees constitute the widest portion with 58 \%.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{employement_type.png}
+    \caption{Employement statistics.}
+    \label{esen_stat}
+\end{figure} 
+\section{Project Description}
+My summer practice mainly focused on the image registration problem.  My task was to search for EO(Electro-optic)-EO and EO-IR(Infrared) registration solutions for night-time GPS-disabled navigation. Thus, the work I have done was a framework for future versions. In this report, the project description is divided into two sections. First, the algorithms proposed recently in the research field are briefly explained. Then, their implementation and results are presented.  
+\subsection{Research on Image Registration Problems}
+The ultimate purpose of the task, that is, EO-IR registration, comes with challenges in which classical approaches may fail to compete with deep-learning-based feature extraction and feature-matching methods. The data coming from the IR camera can not be treated just like they were RGB data. On the other hand, deep learning-based methods are computationally expensive, which is not appreciated in an airborne/power-limited system. 
+\subsubsection{Deep Learning Based Registration Methods}
+In the first week of my summer practice, I dived into some recent work done in the field. The following paragraphs summarize their methodology.
+\paragraph{SuperGlue}
+\cite{sarlin20superglue} is a method presented in CVPR'2020 conference. In principle, the method uses a two-phase architecture to match given images. Thus, this method is just the feature-matching part of the pipeline. As long as the feature extracted is above some precision, it is claimed that the proposed method matches the inputs with confidence scores. The Figure \ref*{superglue} shows the architecture of the \cite{sarlin20superglue}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{superglue_arch.png}
+    \caption{SuperGlue architecture}
+    \label{superglue}
+\end{figure} 
+
+In the first phase, the features are encoded with a keypoint encoder and passed to the attentional graph network. This network calculates self-attention in an image between key points and cross-attention amongst the key points in the other image. In the second phase, the optimal matching layer, the score matrix, is decomposed with the Sinkhorn algorithm to complete the partial assignment.
+\paragraph{Patch2Pix}
+\cite{ZhouCVPRpatch2pix} is a method at a similar abstraction level with SuperGlue \cite{sarlin20superglue} as it is focused on the matching phase. The Patch2Pix method refines the nominee matches by regressing pixel matches from the patches (local regions). At the same time, it rejects the outliers with confidence scores. The network structure is given in Figure \ref{patch2pix}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{patch2pix_arch.png}
+    \caption{Patch2Pix architecture}
+    \label{patch2pix}
+\end{figure} 
+
+
+\paragraph{LoFTR: Detector-Free Local Feature Matching with Transformers}
+\cite{sun2021loftr} is a work presented in CVPR'2021. Contrary to most of the other pipelines, the proposed method has two levels of feature transform that are coarse and fine. Those modules transform the features extracted from a local CNN, and coarse to fine module refines matches coming from the matching module whose input is coming from the coarse level transformer. The LoFTR module includes self and cross-attention submodules to be able to transform the input feature maps with better accuracy. Figure \ref{loftr} shows the architecture of the proposed method.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{loftr_arch.png}
+    \caption{LoFTR architecture}
+    \label{loftr}
+\end{figure} 
+
+\paragraph{CoMIR: Contrastive Multimodal Image Representation for Registration Framework} \cite{pielawski2020comir} is a method presented in NeurIPS'2020. The method aims to create a framework for image registration by changing the form of the multimodal inputs. The multimodal term stands for a different type of visual input; specifically, in my case, our ultimate goal is to achieve multimodal image registration of EO-IR images. The method maps different inputs to a latent space so that traditional image-matching methods easily extract and register the images accurately. The architecture of the CoMIR is given in Figure \ref{comir_pip}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{comir_pipeline.jpg}
+    \caption{CoMIR pipeline with BF (bright field) SHG (second harmonic generation) modalities.}
+    \label{comir_pip}
+\end{figure} 
+
+
+\paragraph{DFM: A Performance Baseline for Deep Feature Matching}
+\cite{Efe_2021_CVPR} is a CVPRW'2021 paper written by members of our department and the METU Center for Image Analysis. The DFM (Deep Feature Matcher) uses pre-trained VGG architecture to extract features and nearest neighbor search and warps the target image in the first stage. In the second stage, a hierarchical refinement is performed for better localization. The architecture of the \cite{Efe_2021_CVPR} is given in Figure \ref{dfm_arch}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{dfm_arch.png}
+    \caption{The architecture of the DFM Algorithm}
+    \label{dfm_arch}
+\end{figure} 
+
+\subsection{Implementation Stage}
+As aforementioned, during the remaining weeks of the summer practice, I performed the evaluations of the algorithms described with the company data. For implementation, to be able to use less time and energy resources, the use of pre-trained models is prioritized. Except for CoMIR \cite{pielawski2020comir}, the pre-trained models are made use of. Since the data that I have generated are bigger than 7 gigabytes (per method) here, just a few examples per method will be presented. On the other hand, it should be pointed out that every experiment setup has its characteristics, and the data that models are trained on might have a very different nature. Some of the methods may underperform on our data. 
+
+\subsubsection{SuperGlue}
+In the second week of my internship, I utilized the codes of \cite{sarlin20superglue} provided by the authors \cite{supergluecode}. An outdoor pretrained model is used in order to match the outdoor airborne image set of the company. Since the superglue is just a feature matcher, SuperPoint \cite{SuperPoint} is used for the feature extraction phase. Figure \ref{eo-eo-superglue_0} shows a typical example of matching of drone and orthoimages. Since the color information does not provide much useful feature set, the evaluations are done on a single channel reducing the computation power. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{superglue/elmadag_396_superglue.png}
+    \caption{Typical EO-EO Result of SuperGlue}
+    \label{eo-eo-superglue_0}
+\end{figure} 
+On the other hand, I have warped the drone images for attitude determination and blended them to visually compare the accuracy of the result. Figure \ref{fig:eo-eo-superglue_0_blended} shows the blended image.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{superglue/396_match_196_inlier_66.png}
+    \caption{Warped and blended image}
+    \label{fig:eo-eo-superglue_0_blended}
+\end{figure} 
+Although this example can be considered successful, in some cases where the scales of the two images are different, the result might not satisfy the requirements. Apart from the EO-EO dataset, there was an EO-IR dataset in which the scales of the two images were quite different, so it became harder to match. Figure \ref{fig:eo-ir-superglue_1} illustrates an example. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{superglue/camlidere_ir_2102_superglue.png}
+    \caption{Typical EO-IR Result of SuperGlue}
+    \label{fig:eo-ir-superglue_1}
+\end{figure} 
+When the target image is warped Figure given in \ref{fig:eo-ir-superglue_1_warped} is obtained.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.4\textwidth}
+
+    \includegraphics[width = 1\textwidth]{superglue/2102_match_26_inlier_8_warped.png}
+    \caption{Warped image}
+    \label{fig:eo-ir-superglue_1_warped}
+    \end{subfigure}
+    \begin{subfigure}{.4\textwidth}
+    \includegraphics[width = 1\textwidth]{superglue/2102_match_26_inlier_8_image2.png}
+    
+    \caption{Source image}
+    \label{fig:eo-ir-superglue_1_warped_0}
+    \end{subfigure}
+    \caption{SuperGlue EO-IR warped image.}
+
+\end{figure} 
+
+This result shows apart from having different modalities having a dataset that is properly aligned in terms of scale is an important factor in image registration problems.
+
+\subsubsection{Patch2Pix}
+Similar to the SuperGlue case, codes (\cite{patch2pixcode}) provided by \cite{ZhouCVPRpatch2pix} are used. Similar to the previous case, the first matches are obtained and written into a NumPy file (.npz). Then using these match vectors, the images are warped. An EO-EO result is given in Figure \ref{eo-eo-patch2pix_0}. For the sake of comparison, the same examples are shown here.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{patch2pix/Elmadag396_DRONE.jpg_m_324_i_14.png}
+    \caption{Typical EO-EO Result of patch2pix}
+    \label{eo-eo-patch2pix_0}
+\end{figure} 
+Then the warped version can be observed from Figure \ref{fig:eo-eo-patch2pix-warped}.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.4\textwidth}
+
+    \includegraphics[width = 1\textwidth]{patch2pix/396_DRONE_match_324_inlier_8_warped.png}
+    \caption{Warped image}
+    \label{fig:eo-eo-patch2pix-warped}
+    \end{subfigure}
+    \begin{subfigure}{.4\textwidth}
+    \includegraphics[width = 1\textwidth]{patch2pix/396_DRONE_match_324_inlier_8_image2.png}
+    
+    \caption{Source image}
+    \label{fig:eo-eo-patch2pix-warped_0}
+    \end{subfigure}
+    \caption{Patch2Pix EO-EO warped image.}
+\end{figure} 
+
+For EO-IR case the results shown in Figure \ref{fig:eo-ir-patch2pix-warped} are obtained. A similar problem with scales remains.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.4\textwidth}
+
+    \includegraphics[width = 1\textwidth]{patch2pix/2102_DRONE_match_42_inlier_7_warped.png}
+    \caption{Warped image}
+    \label{fig:eo-ir-patch2pix-warped}
+    \end{subfigure}
+    \begin{subfigure}{.4\textwidth}
+    \includegraphics[width = 1\textwidth]{patch2pix/2102_DRONE_match_42_inlier_7_image2.png}
+    
+    \caption{Source image}
+    \label{fig:eo-ir-patch2pix-warped_0}
+    \end{subfigure}
+    \caption{Patch2Pix EO-IR warped image.}
+\end{figure} 
+
+\subsubsection{LoFTR}
+For \cite{sun2021loftr} the codes provided by the authors (\cite{loftrcode} are made use of. For the EO-EO case, the warped results given in Figure \ref{fig:eo-ir-loftr-warped} are obtained.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.4\textwidth}
+
+    \includegraphics[width = 1\textwidth]{patch2pix/396_DRONE_match_324_inlier_8_warped.png}
+    \caption{Warped image}
+    \label{fig:eo-eo-loftr-warped}
+    \end{subfigure}
+    \begin{subfigure}{.4\textwidth}
+    \includegraphics[width = 1\textwidth]{patch2pix/396_DRONE_match_324_inlier_8_image2.png}
+    
+    \caption{Source image}
+    \label{fig:eo-eo-loftr-warped_0}
+    \end{subfigure}
+    \caption{LoFTR EO-EO warped image.}
+\end{figure} 
+For the EO-IR case, the results given in Figure \ref{fig:eo-ir-loftr-warped} are obtained. 
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.4\textwidth}
+
+    \includegraphics[width = 1\textwidth]{patch2pix/2102_DRONE_match_42_inlier_7_warped.png}
+    \caption{Warped image}
+    \label{fig:eo-ir-loftr-warped}
+    \end{subfigure}
+    \begin{subfigure}{.4\textwidth}
+    \includegraphics[width = 1\textwidth]{patch2pix/2102_DRONE_match_42_inlier_7_image2.png}
+    
+    \caption{Source image}
+    \label{fig:eo-ir-loftr-warped_0}
+    \end{subfigure}
+    \caption{LoFTR EO-IR warped image.}
+\end{figure} 
+
+
+\subsubsection{CoMIR}
+As described, CoMIR \cite{pielawski2020comir} utilizes a completely different approach for multimodal image registration. Since there was no pretrained model, a training process was carried out with the Zurich IR dataset. The dataset includes a limited amount of labeled data. On the other hand, the IR images have 12 channels it is not convenient to train it in full scale with a regular laptop GPU. So, the training is with aforementioned limitations. Even though the training results did not convince us to evaluate the company data, the value of the idea of IR data usage is noted. For training, official code written by the authors \cite{comircode} is utilized. An example of the training result on latent space mapping is given in Figure \ref{comir-res}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{comir/latentspace00.png}
+    \caption{CoMIR latent space mapping.}
+    \label{comir-res}
+\end{figure} 
+
+\subsubsection{DFM}
+In the last week of my summer practice, I used the official implementation of DFM (\cite{DFMcode}). Since there are a bunch of other methods that are quite successful in the EO-EO case, the evaluations on this method are done for just the EO-IR case. To overcome the scaling issue, I have developed a search algorithm and partially implemented it with the pre-trained model of DFM. Simply source image is cropped randomly, and an attempt at matching is made for each cropped patch. Then the patch with the most matches is used for starting point then the matches are performed around that region. Since it was the last week of the summer practice, I did not get to work on this approach precisely enough. However, it is observed that, in general, the number of inliers tends to increase with this kind of idea. An example match is given in Figure \ref{dfm-res}.
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{dfm/2102_DRONE_2102_ORTHO_matches.png}
+    \caption{DFM EO-IR example (cropped area).}
+    \label{dfm-res}
+\end{figure} 
+
+
+\section{Conclusion}
+In conclusion, during my summer internship, I worked on two sides of the EO-EO and EO-IR image registration R\&D process. First, I have gone through recent methods and listed them for quick and accurate implementation. Then, I performed a series of tests on these methods and evaluated them with the company datasets. For the EO-EO case, most methods were successful with the outdoor pre-trained models. Since there were not enough labeled data, no wide-area IR data, nor computational power for the EO-IR case, there are bottlenecks. Throughout my internship, I have initiated and expanded my knowledge of image registration cases with the help of the research I have done. Also, I have modified and rewritten a bunch of code snippets to the source codes I have developed myself further on the widely used Python libraries. To sum up, during the summer practice, I worked on image registration problems with EO-EO and EO-IR datasets. 
+
+\bibliography{refs/cite}
+
+
+\section*{Appendix}
+Listing 1 shows an example snippet from the evaluation codes from SuperGlue part I have worked on. Listing 2 shows an example from codes I have written for finding homography matrices and warping the images using those matrices. 
+\begin{lstlisting}[caption={Sample Code Snippet for Evaluation},captionpos=b]
+
+device = 'cuda' if torch.cuda.is_available() and not opt.force_cpu else 'cpu'
+print('Running inference on device \"{}\"'.format(device))
+config = {
+    'superpoint': {
+        'nms_radius': opt.nms_radius,
+        'keypoint_threshold': opt.keypoint_threshold,
+        'max_keypoints': opt.max_keypoints
+    },
+    'superglue': {
+        'weights': opt.superglue,
+        'sinkhorn_iterations': opt.sinkhorn_iterations,
+        'match_threshold': opt.match_threshold,
+    }
+}
+matching = Matching(config).eval().to(device)
+
+# Create the output directories if they do not exist already.
+input_dir = Path(opt.input_dir)
+print('Looking for data in directory \"{}\"'.format(input_dir))
+output_dir = Path(opt.output_dir)
+output_dir.mkdir(exist_ok=True, parents=True)
+print('Will write matches to directory \"{}\"'.format(output_dir))
+if opt.eval:
+    print('Will write evaluation results',
+            'to directory \"{}\"'.format(output_dir))
+if opt.viz:
+    print('Will write visualization images to',
+            'directory \"{}\"'.format(output_dir))
+
+timer = AverageTimer(newline=True)
+for i, pair in enumerate(pairs):
+    name0, name1 = pair[:2]
+    stem0, stem1 = Path(name0).stem, Path(name1).stem
+    matches_path = output_dir / '{}_{}_matches.npz'.format(stem0, stem1)
+    eval_path = output_dir / '{}_{}_evaluation.npz'.format(stem0, stem1)
+    viz_path = output_dir / '{}_{}_matches.{}'.format(stem0, stem1, opt.viz_extension)
+    viz_eval_path = output_dir / \
+        '{}_{}_evaluation.{}'.format(stem0, stem1, opt.viz_extension)
+
+    # Handle --cache logic.
+    do_match = True
+    do_eval = opt.eval
+    do_viz = opt.viz
+    do_viz_eval = opt.eval and opt.viz
+    if opt.cache:
+        if matches_path.exists():
+            try:
+                results = np.load(matches_path)
+            except:
+                raise IOError('Cannot load matches .npz file: %s' %
+                                matches_path)
+
+            kpts0, kpts1 = results['keypoints0'], results['keypoints1']
+            matches, conf = results['matches'], results['match_confidence']
+            do_match = False
+        if opt.eval and eval_path.exists():
+            try:
+                results = np.load(eval_path)
+            except:
+                raise IOError('Cannot load eval .npz file: %s' % eval_path)
+            err_R, err_t = results['error_R'], results['error_t']
+            precision = results['precision']
+            matching_score = results['matching_score']
+            num_correct = results['num_correct']
+            epi_errs = results['epipolar_errors']
+            do_eval = False
+        if opt.viz and viz_path.exists():
+            do_viz = False
+        if opt.viz and opt.eval and viz_eval_path.exists():
+            do_viz_eval = False
+        timer.update('load_cache')
+
+    if not (do_match or do_eval or do_viz or do_viz_eval):
+        timer.print('Finished pair {:5} of {:5}'.format(i, len(pairs)))
+        continue
+
+    # If a rotation integer is provided (e.g. from EXIF data), use it:
+    if len(pair) >= 5:
+        rot0, rot1 = int(pair[2]), int(pair[3])
+    else:
+        rot0, rot1 = 0, 0
+
+    # Load the image pair.
+    image0, inp0, scales0 = read_image(
+        input_dir / name0, device, opt.resize, rot0, opt.resize_float)
+    image1, inp1, scales1 = read_image(
+        input_dir / name1, device, opt.resize, rot1, opt.resize_float)
+    if image0 is None or image1 is None:
+        print('Problem reading image pair: {} {}'.format(
+            input_dir/name0, input_dir/name1))
+        exit(1)
+    timer.update('load_image')
+
+    if do_match:
+        # Perform the matching.
+        pred = matching({'image0': inp0, 'image1': inp1})
+        pred = {k: v[0].cpu().numpy() for k, v in pred.items()}
+        kpts0, kpts1 = pred['keypoints0'], pred['keypoints1']
+        matches, conf = pred['matches0'], pred['matching_scores0']
+        timer.update('matcher')
+
+        # Write the matches to disk.
+        out_matches = {'keypoints0': kpts0, 'keypoints1': kpts1,
+                        'matches': matches, 'match_confidence': conf}
+        np.savez(str(matches_path), **out_matches)
+
+    # Keep the matching keypoints.
+    valid = matches > -1
+    mkpts0 = kpts0[valid]
+    mkpts1 = kpts1[matches[valid]]
+    mconf = conf[valid]
+
+    if do_eval:
+        # Estimate the pose and compute the pose error.
+        assert len(pair) == 38, 'Pair does not have ground truth info'
+        K0 = np.array(pair[4:13]).astype(float).reshape(3, 3)
+        K1 = np.array(pair[13:22]).astype(float).reshape(3, 3)
+        T_0to1 = np.array(pair[22:]).astype(float).reshape(4, 4)
+
+        # Scale the intrinsics to resized image.
+        K0 = scale_intrinsics(K0, scales0)
+        K1 = scale_intrinsics(K1, scales1)
+
+        # Update the intrinsics + extrinsics if EXIF rotation was found.
+        if rot0 != 0 or rot1 != 0:
+            cam0_T_w = np.eye(4)
+            cam1_T_w = T_0to1
+            if rot0 != 0:
+                K0 = rotate_intrinsics(K0, image0.shape, rot0)
+                cam0_T_w = rotate_pose_inplane(cam0_T_w, rot0)
+            if rot1 != 0:
+                K1 = rotate_intrinsics(K1, image1.shape, rot1)
+                cam1_T_w = rotate_pose_inplane(cam1_T_w, rot1)
+            cam1_T_cam0 = cam1_T_w @ np.linalg.inv(cam0_T_w)
+            T_0to1 = cam1_T_cam0
+
+        epi_errs = compute_epipolar_error(mkpts0, mkpts1, T_0to1, K0, K1)
+        correct = epi_errs < 5e-4
+        num_correct = np.sum(correct)
+        precision = np.mean(correct) if len(correct) > 0 else 0
+        matching_score = num_correct / len(kpts0) if len(kpts0) > 0 else 0
+
+        thresh = 1.  # In pixels relative to resized image size.
+        ret = estimate_pose(mkpts0, mkpts1, K0, K1, thresh)
+        if ret is None:
+            err_t, err_R = np.inf, np.inf
+        else:
+            R, t, inliers = ret
+            err_t, err_R = compute_pose_error(T_0to1, R, t)
+
+        # Write the evaluation results to disk.
+        out_eval = {'error_t': err_t,
+                    'error_R': err_R,
+                    'precision': precision,
+                    'matching_score': matching_score,
+                    'num_correct': num_correct,
+                    'epipolar_errors': epi_errs}
+        np.savez(str(eval_path), **out_eval)
+        timer.update('eval')
+
+    if do_viz:
+        # Visualize the matches.
+        color = cm.jet(mconf)
+        text = [
+            'SuperGlue',
+            'Keypoints: {}:{}'.format(len(kpts0), len(kpts1)),
+            'Matches: {}'.format(len(mkpts0)),
+        ]
+        if rot0 != 0 or rot1 != 0:
+            text.append('Rotation: {}:{}'.format(rot0, rot1))
+
+        # Display extra parameter info.
+        k_thresh = matching.superpoint.config['keypoint_threshold']
+        m_thresh = matching.superglue.config['match_threshold']
+        small_text = [
+            'Keypoint Threshold: {:.4f}'.format(k_thresh),
+            'Match Threshold: {:.2f}'.format(m_thresh),
+            'Image Pair: {}:{}'.format(stem0, stem1),
+        ]
+
+        make_matching_plot(
+            image0, image1, kpts0, kpts1, mkpts0, mkpts1, color,
+            text, viz_path, opt.show_keypoints,
+            opt.fast_viz, opt.opencv_display, 'Matches', small_text)
+
+        timer.update('viz_match')
+
+    if do_viz_eval:
+        # Visualize the evaluation results for the image pair.
+        color = np.clip((epi_errs - 0) / (1e-3 - 0), 0, 1)
+        color = error_colormap(1 - color)
+        deg, delta = ' deg', 'Delta '
+        if not opt.fast_viz:
+            deg, delta = '\deg', '\Delta'
+        e_t = 'FAIL' if np.isinf(err_t) else '{:.1f}{}'.format(err_t, deg)
+        e_R = 'FAIL' if np.isinf(err_R) else '{:.1f}{}'.format(err_R, deg)
+        text = [
+            'SuperGlue',
+            '{}R: {}'.format(delta, e_R), '{}t: {}'.format(delta, e_t),
+            'inliers: {}/{}'.format(num_correct, (matches > -1).sum()),
+        ]
+        if rot0 != 0 or rot1 != 0:
+            text.append('Rotation: {}:{}'.format(rot0, rot1))
+
+        # Display extra parameter info (only works with --fast_viz).
+        k_thresh = matching.superpoint.config['keypoint_threshold']
+        m_thresh = matching.superglue.config['match_threshold']
+        small_text = [
+            'Keypoint Threshold: {:.4f}'.format(k_thresh),
+            'Match Threshold: {:.2f}'.format(m_thresh),
+            'Image Pair: {}:{}'.format(stem0, stem1),
+        ]
+
+        make_matching_plot(
+            image0, image1, kpts0, kpts1, mkpts0,
+            mkpts1, color, text, viz_eval_path,
+            opt.show_keypoints, opt.fast_viz,
+            opt.opencv_display, 'Relative Pose', small_text)
+
+        timer.update('viz_eval')
+
+    timer.print('Finished pair {:5} of {:5}'.format(i, len(pairs)))
+
+if opt.eval:
+    # Collate the results into a final table and print to terminal.
+    pose_errors = []
+    precisions = []
+    matching_scores = []
+    for pair in pairs:
+        name0, name1 = pair[:2]
+        stem0, stem1 = Path(name0).stem, Path(name1).stem
+        eval_path = output_dir / \
+            '{}_{}_evaluation.npz'.format(stem0, stem1)
+        results = np.load(eval_path)
+        pose_error = np.maximum(results['error_t'], results['error_R'])
+        pose_errors.append(pose_error)
+        precisions.append(results['precision'])
+        matching_scores.append(results['matching_score'])
+    thresholds = [5, 10, 20]
+    aucs = pose_auc(pose_errors, thresholds)
+    aucs = [100.*yy for yy in aucs]
+    prec = 100.*np.mean(precisions)
+    ms = 100.*np.mean(matching_scores)
+    print('Evaluation Results (mean over {} pairs):'.format(len(pairs)))
+    print('AUC@5\t AUC@10\t AUC@20\t Prec\t MScore\t')
+    print('{:.2f}\t {:.2f}\t {:.2f}\t {:.2f}\t {:.2f}\t'.format(
+        aucs[0], aucs[1], aucs[2], prec, ms))
+\end{lstlisting}
+\begin{lstlisting}[caption={Sample Code Snippet for Homography and Waring},captionpos=b]
+import cv2
+import numpy as np
+
+import glob
+import os
+
+
+foldername = "Camlidere_IR_EO"
+list_of_images = glob.glob("../train_test2/"+foldername+"/*.jpg")
+list_of_points = glob.glob("output_"+"camlidere_ir"+"/*.npz")
+
+
+
+
+directory  = "warping2/warped/"+foldername+"/"
+directory2 = "warping/blended/"+foldername+"/"
+if not os.path.exists(directory):
+    os.makedirs(directory)
+if not os.path.exists(directory2):
+    os.makedirs(directory2)
+
+list_of_images.sort()
+
+list_of_points.sort()
+
+for i in range(0,len(list_of_images),2):
+    
+    image1 = cv2.imread(str(list_of_images[i]))
+    image2 = cv2.imread(str(list_of_images[i+1]))
+
+
+    #filename = list_of_images[i].rstrip(".jpg") 
+    #filename = filename.lstrip("assets/train_test/"+foldername+"/")
+    filename = list_of_points[int(i//2)].split("_")[-3]
+
+
+    image1 = cv2.resize(image1,(640,480))
+    image2 = cv2.resize(image2,(640,480))
+    points = np.load(list_of_points[int(i//2)])
+    print(filename)
+
+    lst = points.files
+
+    keypoints0 = points["keypoints0"]
+    keypoints1 = points["keypoints1"]
+    matches = points["matches"]
+    conf = points["match_confidence"]
+
+    valid = matches > -1
+
+
+
+    valid_keypoints0 =  keypoints0[valid]
+
+    valid_keypoints1 =  keypoints1[matches[valid]]
+    
+    match_number = len(keypoints0[valid][:,0])
+    
+    if match_number>= 6:
+        H, mask = cv2.findHomography(valid_keypoints0, valid_keypoints1,cv2.RANSAC)
+        numInliers = cv2.countNonZero(mask)
+
+        
+        im_out = cv2.warpPerspective(image1, H, (image2.shape[1],image2.shape[0]))
+
+        blended = cv2.addWeighted(image2,0.6,im_out,0.4,0)
+
+            
+        cv2.imwrite(directory+filename+"_match_"+str(match_number)+"_inlier_"+str(numInliers)+"_warped.png",im_out)
+        cv2.imwrite(directory+filename+"_match_"+str(match_number)+"_inlier_"+str(numInliers)+"_image2.png",image2)
+        
+        cv2.imwrite(directory2+filename+"_match_"+str(match_number)+"_inlier_"+str(numInliers)+".png",blended)
+\end{lstlisting}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE TABLE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\begin{center}
+    \caption{Resistance reading by color code convention.}
+    \vspace{2mm}
+    \begin{tabular}{||c | c | c||} 
+        \hline
+        Color Order & Value & Tolerance \\ [0.5ex] 
+        \hline\hline
+        Brown / Black / Red / Gold & 1k\( \Omega \) & \( \% \) 5  \\ 
+        \hline
+        Yellow / Violet / Red / Gold & 4.7k\( \Omega \) & \( \% \) 5   \\
+        \hline
+        Brown / Grey / Orange / Gold & 18k\( \Omega \) & \( \% \) 5  \\ [1ex] 
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.75\textwidth]{5.png}
+\caption{Circuit schematic for step 5}
+\end{figure} 
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE FROM PDF   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H] \centering{
+    \includegraphics[scale=0.25]{2a_plot.pdf}}
+    \caption{Experiment 2}
+\end{figure}
