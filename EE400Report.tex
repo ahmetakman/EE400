@@ -8,7 +8,7 @@
 \usepackage{graphicx} % takes care of graphic including machinery
 \graphicspath{ {./figures/} }
 %\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
-%\usepackage{cite} % takes care of citations
+
 \usepackage[final]{hyperref} % adds hyperlinks inside the generated pdf file
 \hypersetup{
     colorlinks=true,       % false: boxed links; true: colored links
@@ -66,7 +66,7 @@
 \author{Intern: Ahmet Akman 2442366\\
 Supervisor: Dr. Johannes Zierenberg\\
 Supervisor Contact: \href{mailto: johannes.zierenberg@ds.mpg.de}{ johannes.zierenberg@ds.mpg.de. }-\href{tel:+495515176475}{+495515176475}\\
-Assigned Faculty Member: Fatih Kamışlı\\
+Assigned Faculty Member: Prof.Dr. Engin Tuncer\\
 Institution Name: Max Planck Institute for Dynamics and Self-Organization\\
 Start date:03.07.2023 || End date: 22.09.2023\\
         \vspace*{0.25in} \\
@@ -102,10 +102,23 @@ Am Faßberg 17
 37077 Göttingen
 Germany
 \subsection{General Description}
+The Max Planck Institute for Dynamics and Self-Organization, located in Göttingen, Germany, is a prominent research institution primarily focused on the investigation of complex non-equilibrium systems, particularly within the fields of physics and biology. Its historical roots trace back to 1911 when Ludwig Prandtl initiated the establishment of a Kaiser Wilhelm Institute dedicated to the study of aerodynamics and hydrodynamics. This initial effort led to the formation of the Aeronautische Versuchsanstalt in 1915, which later evolved into the Kaiser Wilhelm Institute for Flow Research in 1924. In 1948, it became a part of the Max Planck Society. In 2003, it underwent a name change and became the Max Planck Institute for Dynamics and Self-Organization. Presently, it stands as one of the 80 institutes under the auspices of the Max Planck Society, contributing significantly to the understanding of intricate dynamic systems.
+
 \subsection{Organization Structure}
-\subsection{Employment}
-\section{Background and Motivation}
+
+\section{Project Background and Motivation}
+The research project for the internship is constructed upon the following set of previous research. In the field of neuroscience \cite{CHAOS}, initiated the idea of inhibition is a necessary part of a neuronal network for stability of the network. Then, the impactful paper \cite{brunel} explained the dynamics of a sparsely connected random network with fixed parameters. Also, the role of inhibition was similar to the \cite{CHAOS}. The phases of the network through these dynamics are also stated. These states can be summarized as follows also givein in Figure \ref{brunel_fig}. Synchronous regular (SR) is the state where the whole network is blinking in a synchronized way. So, the neurons are synchronized with each other, exciting each other together, and regular activity is observed. Synchronous irregular (SI) is the state where the individual neurons show irregular activity, but the global activity is still regular. Therefore, the rate of the random network is still blinking in some sense. SI-fast and SI-slow characterize this as two different dynamical states. The asynchronous irregular state is the desired stable state where both the individual (per-neuron) and global activity show irregularity, that is, to small average overall activity not-blinking global network. \cite{brunel} has been considered as a guiding baseline in the field, and many other network descriptions built upon this idea, including inhibition as a factor for stability. It is important to note that the \cite{brunel} employs a fixed set of parameters on a completely randomly connected network.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{brunel.png}
+    \caption{The states of the networks. (A) Synchronous Irregular. (B) Synchronous Irregular-fast. (C) Asynchronous Irregular. (D) Synchronous Irregular-slow.}
+    \label{brunel_fig}
+\end{figure} 
+
 \subsection{Hypothesis}
+
+In neurobiology, one can characterize the neurons as excitatory and inhibitory. A typical excitatory neuron is called a pyramidal neuron, whereas there are more than 20 mainstream types of inhibitory neurons. The idea is that the role of inhibition might be something other than only stabilizing the network. So, we hypothesize that only excitatory networks can be stable. To achieve this goal, the structural connectivity of the network should be reconsidered. \cite{2Dstructure} describes the 2D layered structure of the cortical networks in the brain. 
 \section{Project Description}
 \subsection{Baseline}
 \subsection{Homeostastatic Regulation}
@@ -117,6 +130,8 @@ Germany
 
 \section{Conclusion}
 \section{References}
+\bibliography{refs/cite}
+
 \section{Appendix}
 
 \end{document}
@@ -144,7 +159,7 @@ Germany
 %%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\includegraphics[width = 0.75\textwidth]{5.png}
+\includegraphics[width = 1\textwidth]{5.png}
 \caption{Circuit schematic for step 5}
 \end{figure} 
 

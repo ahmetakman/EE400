@@ -1,101 +1,57 @@
-@inproceedings{sarlin20superglue,
-  title     = {{SuperGlue}: Learning Feature Matching with Graph Neural Networks},
-  author    = {Paul-Edouard Sarlin and
-               Daniel DeTone and
-               Tomasz Malisiewicz and
-               Andrew Rabinovich},
-  booktitle = {CVPR},
-  year      = {2020},
-}
-@inproceedings{ZhouCVPRpatch2pix,
-        author       = "Zhou, Qunjie and Sattler, Torsten and Leal-Taixe, Laura",
-        title        = "Patch2Pix: Epipolar-Guided Pixel-Level Correspondences",
-        booktitle    = "CVPR",
-        year         = 2021,
-}
-@article{sun2021loftr,
-  title={{LoFTR}: Detector-Free Local Feature Matching with Transformers},
-  author={Sun, Jiaming and Shen, Zehong and Wang, Yuang and Bao, Hujun and Zhou, Xiaowei},
-  journal={CVPR},
-  year={2021}
-}
-@inproceedings{pielawski2020comir,
- author = {Pielawski, Nicolas and Wetzer, Elisabeth and \"{O}fverstedt, Johan and Lu, Jiahao and W\"{a}hlby, Carolina and Lindblad, Joakim and Sladoje, Nata{\v{s}}a},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
- pages = {18433--18444},
- publisher = {Curran Associates, Inc.},
- title = {{CoMIR}: Contrastive Multimodal Image Representation for Registration},
- url = {https://proceedings.neurips.cc/paper/2020/file/d6428eecbe0f7dff83fc607c5044b2b9-Paper.pdf},
- volume = {33},
- year = {2020}
-}
-@InProceedings{Efe_2021_CVPR,
-    author    = {Efe, Ufuk and Ince, Kutalmis Gokalp and Alatan, Aydin},
-    title     = {DFM: A Performance Baseline for Deep Feature Matching},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-    month     = {June},
-    year      = {2021},
-    pages     = {4284-4293}
+
+@article{
+CHAOS,
+author = {C. van Vreeswijk  and H. Sompolinsky },
+title = {Chaos in Neuronal Networks with Balanced Excitatory and Inhibitory Activity},
+journal = {Science},
+volume = {274},
+number = {5293},
+pages = {1724-1726},
+year = {1996},
+doi = {10.1126/science.274.5293.1724},
+URL = {https://www.science.org/doi/abs/10.1126/science.274.5293.1724},
+eprint = {https://www.science.org/doi/pdf/10.1126/science.274.5293.1724},
+abstract = {Neurons in the cortex of behaving animals show temporally irregular spiking patterns. The origin of this irregularity and its implications for neural processing are unknown. The hypothesis that the temporal variability in the firing of a neuron results from an approximate balance between its excitatory and inhibitory inputs was investigated theoretically. Such a balance emerges naturally in large networks of excitatory and inhibitory neuronal populations that are sparsely connected by relatively strong synapses. The resulting state is characterized by strongly chaotic dynamics, even when the external inputs to the network are constant in time. Such a network exhibits a linear response, despite the highly nonlinear dynamics of single neurons, and reacts to changing external stimuli on time scales much smaller than the integration time constant of a single neuron.}}
+
+@article{brunel,
+author = {Brunel, Nicolas},
+year = {2000},
+month = {01},
+pages = {},
+title = {Dynamics of Sparsely Connected Networks of Excitatory and Inhibitory Spiking Neurons},
+volume = {8},
+journal = {Journal of Computational Neuroscience},
+doi = {10.1023/A:1008925309027}
 }
 
-@misc{DFMcode,
-  author = {Efe,U},
-  title = {DFM},
-  year = {2021},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/ufukefe/DFM}},
-}
-
-@misc{ComirCode,
-  author = {MIDAGroup},
-  title = {CoMIR},
-  year = {2020},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/MIDA-group/CoMIR}},
+@article {brian2,
+article_type = {journal},
+title = {Brian 2, an intuitive and efficient neural simulator},
+author = {Stimberg, Marcel and Brette, Romain and Goodman, Dan FM},
+editor = {Skinner, Frances K and Calabrese, Ronald L and Skinner, Frances K and Zeldenrust, Fleur and Gerkin, Richard C},
+volume = 8,
+year = 2019,
+month = {aug},
+pub_date = {2019-08-20},
+pages = {e47314},
+citation = {eLife 2019;8:e47314},
+doi = {10.7554/eLife.47314},
+url = {https://doi.org/10.7554/eLife.47314},
+abstract = {Brian 2 allows scientists to simply and efficiently simulate spiking neural network models. These models can feature novel dynamical equations, their interactions with the environment, and experimental protocols. To preserve high performance when defining new models, most simulators offer two options: low-level programming or description languages. The first option requires expertise, is prone to errors, and is problematic for reproducibility. The second option cannot describe all aspects of a computational experiment, such as the potentially complex logic of a stimulation protocol. Brian addresses these issues using runtime code generation. Scientists write code with simple and concise high-level descriptions, and Brian transforms them into efficient low-level code that can run interleaved with their code. We illustrate this with several challenging examples: a plastic model of the pyloric network, a closed-loop sensorimotor model, a programmatic exploration of a neuron model, and an auditory model with real-time input.},
+keywords = {computational neuroscience, simulation, software},
+journal = {eLife},
+issn = {2050-084X},
+publisher = {eLife Sciences Publications, Ltd},
 }
 
 
-@misc{loftrcode,
-  author = {Sun,J},
-  title = {loftr},
-  year = {2021},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/zju3dv/LoFTR}},
-}
-
-@misc{patch2pixcode,
-  author = {zhou},
-  title = {patch2pix},
-  year = {2021},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/GrumpyZhou/patch2pix}},
-}
-
-@misc{supergluecode,
-  author = {magicleap},
-  title = {superglue},
-  year = {2020},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/magicleap/SuperGluePretrainedNetwork}},
-}
-@article{SuperPoint,
-  author    = {Daniel DeTone and
-               Tomasz Malisiewicz and
-               Andrew Rabinovich},
-  title     = {SuperPoint: Self-Supervised Interest Point Detection and Description},
-  journal   = {CoRR},
-  volume    = {abs/1712.07629},
-  year      = {2017},
-  url       = {http://arxiv.org/abs/1712.07629},
-  eprinttype = {arXiv},
-  eprint    = {1712.07629},
-  timestamp = {Mon, 13 Aug 2018 16:47:29 +0200},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-1712-07629.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{2Dstructure,
+author = {Hellwig, Bernhard},
+year = {2000},
+month = {03},
+pages = {111-21},
+title = {A quantitative analysis of the local connectivity between pyramidal neurons in layers 2/3 of the rat visual cortex},
+volume = {82},
+journal = {Biological cybernetics},
+doi = {10.1007/PL00007964}
 }
