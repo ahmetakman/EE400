@@ -165,15 +165,59 @@ There are two important points that should be stated. First, the "smallest dista
 
 
 \subsection{Baseline}
-First, the simulations that form our basis are done via setting a  
+
+
+First, the simulations that form a basis are conveyed before introducing regulative mechanisms. Let us build our model one by one. The differential equations that determine the behavior of a neuron are given in equation \ref{diff_eqn}
+
+\begin{equation}
+    \begin{split}
+        \frac{dv}{dt} & = -\frac{(v - v_{leak_i})}{\tau_{mem_i}}+ noiseparam \times sqrt(\frac{2}{\tau_{mem_i}}) \times xi \\
+        \frac{dI_{exc}}{dt} & = \frac{I_{exc}}{\tau_{exc_i}}
+    \end{split}
+    \label{diff_eqn}
+\end{equation}
+The main parameters are taken from \cite{brunel} for consistency. The parameters and the maximum noise value are given in Table \ref{parameterset}. This is the model for spiking neurons as the $v_{thres}$ exceeded the neuron spikes and the membrane voltage returns to the reset value. The $d_{\text{syn}}$ is the axonal delay parameter where the spikes take their time to reach the destination neuron. The $\tau_{\text{ref}}$ corresponds to the refractory period in which the neuron can not spike for that amount of time after spiking. The reversal parameter is implemented in order to scale the code easily in case of introduction inhibition. So, if a neuron gets too much inhibition in a time interval, the reversal parameter can not exceeded. That is biologically realistic since, in such a situation, the synaptic interface gets saturated.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Parameter & Value & Maximum Noise \\
+    \hline
+    $\tau_m$ & 20.0 ms & 1.0 \\
+    $\tau_{\text{syn\_exc}}$ & 5.0 ms & 0.2 \\
+    $v_{\text{leak}}$ & 0 mV & 0 \\
+    $v_{\text{thres}}$ & 20 mV & 0.5 \\
+    $v_{\text{reset}}$ & 10 mV & 0.5 \\
+    $\tau_{\text{ref}}$ & 2 ms & -- \\
+    $d_{\text{syn}}$ & 1.5 ms & -- \\
+    $v_{\text{rev}}$ & -10.0 mV & reversal \\
+    \hline
+    \end{tabular}
+    \caption{Parameter Values}
+    \label{parameterset}
+\end{table}
+It should be noted that different from \cite{brunel}, temporal and parameter noise is involved in our model in order to make it stochastic, thus realistic. Also, to make sure that introducing $\% 5$ noise does not make the system deviate from where it should be, the simulations are also run in no-noise settings, and it is verified that the variability does not make the system go crazy.
+
+As we have compiled our basic neuronal model, the coupling parameter $J$ is swept through different values in order to find the threshold where the neuronal activity jumps. The activity is measured as a rate per second per neuron from a few milliseconds of the simulation. Therefore, the resultant rate gives necessary information about sustaining activity. In this baseline, the external drive can be summarised as follows. For 5 seconds, each neuron gets a very high external Poisson rate of excitation. So, the network gets charged up. Then, the external drive was suspended, and the simulation continued for 15 seconds. As a result, the $J(mV)$ vs activity plot presented in Figure \ref{jvsactivity} is obtained. Also, when we zoom in on the time development of the four closest points to the jump point, as presented in \ref{ratevstime}, one can see that even though each network settles for a small amount of time to an intermediate non-full-bursting state, two of them dies out afterward. 
+\begin{figure}[htbp] \centering{
+    \includegraphics[width=\linewidth]{J_vs_activity.pdf}}
+    \caption{Rate (Hz) vs J(mV) for baseline.}
+    \label{jvsactivity}
+\end{figure}
+
+\begin{figure}[htbp] \centering{
+    \includegraphics[width=\linewidth]{time_vs_activity.pdf}}
+    \caption{Rate (Hz) vs time (ms) for baseline samples in logscale.}
+    \label{ratevstime}
+\end{figure}
+
+The project is steered towards employing regulatory mechanisms for coupling parameter $J$ by forming a baseline.
+
+
 \subsection{Homeostastatic Regulation}
 \subsection{Future Projection on the Project}
 
-\section{Project Implementation and Results}
-\subsection{Baseline Results}
-\subsection{Homeostatic Regulation Results}
-
-\section{Conclusion}
 \section{References}
 \bibliography{refs/cite}
 
