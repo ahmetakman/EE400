@@ -105,7 +105,7 @@ Germany
 The Max Planck Institute for Dynamics and Self-Organization, located in Göttingen, Germany, is a prominent research institution primarily focused on the investigation of complex non-equilibrium systems, particularly within the fields of physics and biology. Its historical roots trace back to 1911 when Ludwig Prandtl initiated the establishment of a Kaiser Wilhelm Institute dedicated to the study of aerodynamics and hydrodynamics. This initial effort led to the formation of the Aeronautische Versuchsanstalt in 1915, which later evolved into the Kaiser Wilhelm Institute for Flow Research in 1924. In 1948, it became a part of the Max Planck Society. In 2003, it underwent a name change and became the Max Planck Institute for Dynamics and Self-Organization. Presently, it stands as one of the 80 institutes under the auspices of the Max Planck Society, contributing significantly to the understanding of intricate dynamic systems.
 
 \subsection{Organization Structure}
-The organization structure of the institute is given in Figure \ref{organization}. I was part of the group led by Prof.Dr. Viola Priesemann which is indicated as italic on \ref{organization}.
+The organization structure of the institute is given in Figure \ref{organization}. I was part of the group led by Prof.Dr. Viola Priesemann which is indicated as italic on Figure \ref{organization}.
 
 \begin{figure}[htb!] \centering{
     \includegraphics[width=\linewidth]{OrgChartMPIDS.pdf}}
@@ -128,7 +128,7 @@ The research project for the internship is constructed upon the following set of
 In neurobiology, one can classify the neurons as excitatory and inhibitory. A typical excitatory neuron is called a pyramidal neuron, whereas there are more than 20 mainstream types of inhibitory neurons. The idea is that the role of inhibition might be something other than just stabilizing the network. So, we hypothesize that only excitatory networks can be stable. To achieve the stability, the structural connectivity of the network should be reconsidered. \cite{2Dstructure} describes the 2D layered structure of the cortical networks in the brain. 
 
 \section{Project Description}
-The project is built upon the hypothesized idea frame. First, the tools for the project are determined. For simulation implementation, Python programming language and a brain simulator package called Brian2 \cite{brian2} are used. The simulations run on the HPC (High-performance computing cluster.), which is set to be used with the industry standard SGE (Sun Grid Engine). The project timeline aligns with the report format presented in this document. 
+The project is built upon the hypothesized idea frame. First, the tools for the project are determined. For simulation implementation, Python programming language and a brain simulator package called Brian2 \cite{brian2} are used. The simulations run on a HPC (High-performance computing cluster.), which is set to be used with the industry standard SGE (Sun Grid Engine). The project timeline aligns with the report format presented in this document. 
 
 \subsection{2D Connectivity}
 The 2D locality of the network is somewhat intuitive as the neurons in the cortical networks have a higher probability of connection to nearby neurons. In order to model this phenomenon, first, the $N$ number of neurons is randomly located in the $1 by 1$ area. Then, according to the "smallest distance" between each pair, the probability map is constructed by zero-mean Gaussian. Figure \ref{prob_map} gives an example probability map for $N = $. In this formulation, the outdegree $K$ of the neurons is fixed. That is to say, one neuron has a fixed number of outgoing connections. In other words, one axon has a fixed number of synapses. According to the probability map, the connection assignment process is conveyed as picking $K$ number of neuron $j$'s to connect neuron $i$ without replacement. A sample is given in Figure \ref{connectionmap}.
@@ -300,9 +300,12 @@ Figure \ref{foxtrot76PSD} presents the power spectral density for external rate 
     \label{foxtrot76PSD}
 \end{figure}
 
-\subsection{Future Projection on the Project}
+\subsection{Future Ideas}
+\begin{itemize}
+    \item 
+\end{itemize}
+\section{Conclusion}
 
-\section{References}
 \bibliography{refs/cite}
 
 \section{Appendix}
