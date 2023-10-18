@@ -17,7 +17,7 @@
     filecolor=magenta,     % color of file links
     urlcolor =blue         
 }
-\usepackage[margin = 1in,headsep=0.5cm,headheight=2cm,letterpaper]{geometry} 
+\usepackage[margin = 1in,headsep=0.5cm,headheight=2cm,a4paper]{geometry} 
 \usepackage{subcaption}
 
 \usepackage{fancyhdr}
@@ -77,7 +77,7 @@ Start date:03.07.2023 || End date: 22.09.2023\\
 
 \begin{document}
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 
 %\thispagestyle{empty}
 %\includepdf[pages=-]{coverpage_signed.pdf}
@@ -247,7 +247,7 @@ In figure \ref{charlie76ratevstime}, the rate versus time plot for $\nu_{ext} = 
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.8\linewidth]{nu_ext_76rate_over_time_homeostasis.pdf}
-    \caption{Rate (Hz) vs Time (ms)}
+    \caption{Rate (Hz) vs Time (s)}
     \label{charlie76ratevstime}
 \end{figure}
 In order to observe the evolution of $J_i$, it is given in Figure \ref{charlie76alphavstime}. As one can see from the plot, the averaged J value converges to a fixed value. 
@@ -276,13 +276,13 @@ Another set of comparisons is presented in Figures \ref{charlie72ratevstime} and
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.8\linewidth]{nu_ext_72rate_over_time_homeostasis.pdf}
-    \caption{Rate (Hz) vs Time (ms) for $\nu_{ext} = 72$.}
+    \caption{Rate (Hz) vs Time (s) for $\nu_{ext} = 72$.}
     \label{charlie72ratevstime}
 \end{figure}
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.8\linewidth]{nu_ext_72alpha_over_time_homeostasis.pdf}
-    \caption{J (mV) vs Time (ms) for $\nu_{ext} = 72$.}
+    \caption{J (mV) vs Time (s) for $\nu_{ext} = 72$.}
     \label{charlie72alphavstime}
 \end{figure}
 
@@ -294,6 +294,13 @@ The adaptation of the external synaptic coupling strengths is also implemented. 
     \includegraphics[width=0.8\linewidth]{nuext_vs_activity_foxtrot.pdf}
     \caption{$\nu_{ext}$ vs Rate (Hz) for external adaptation enabled case.}
     \label{foxtrot}
+\end{figure}
+Figure \ref{foxtrot_rate} shows the time evolution of the population rate versus time for $\nu_{ext}=68$ where the difference between the random network and 2D network shapes. 
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.8\linewidth]{nu_ext_68rate_over_time_homeostasis_foxtrot.pdf}
+    \caption{ Rate (Hz) vs Time (s) for external adaptation enabled case.}
+    \label{foxtrot_rate}
 \end{figure}
 Figure \ref{foxtrot76PSD} presents the power spectral density for external rate $\nu_{ext} = 76$. Similarly, this PSD also carries a preliminary function.
 \begin{figure}[H] 
@@ -311,9 +318,9 @@ Figure \ref{foxtrot76PSD} presents the power spectral density for external rate 
 \end{itemize}
 \section{Conclusion}
 In this document the work done at the research internship pursued at MPI-DS as a part of Erasmus+ program and EE400 course is presented. The main focus of the internship to get hands-on experience with scientific research and HPC computing. This was achieved while studying the dynamics of only-excitatory locally structured sparse spiking neuronal networks' dynamics. The population behaviour together with stability constraints were investigated.
+
 \bibliography{refs/cite} 
 
-\section{Appendix}
 
 \end{document}
 
