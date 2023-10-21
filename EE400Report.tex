@@ -92,6 +92,7 @@ Start date:03.07.2023 || End date: 22.09.2023\\
 %abstract
 %\end{abstract}
 \section{Introduction}
+This report presents the work done as a part of the internship on only excitatory (possibly) stable neuronal networks. First, the institution will be described. Then, the hypothesis and background information will be provided. Following, the study operated there will be explained in detail. Lastly, together with future projections, the report will be concluded.
 \section{About Institution}
 \subsection{Institution Name}
 Max Planck Institute for Dynamics and Self-Organization.
@@ -236,10 +237,10 @@ Here we model each coupling $J_{ij}$ as dynamical variable. The synapse model is
 \end{equation}
 As can be observed from the baseline step, the system needs some level of energy in order to start spiking at a considerable rate. Therefore, different external Poisson excitation rates are applied. The target rate is set to 10 Hz.
 
-Now that we have formulated our homeostatic steps, let's look at the results obtained. First, notice that there are more than one set of points. The reason is to be able to keep the 2D locality as a comparison element. The two simulations are run simultaneously. The simulations are named by the aviation alphabet to keep track of them more manageable when we have more than a few setups. The "Charlie" simulations (indicated by the color yellow) have a 2D Gaussian. The "Sierra" simulations (indicated by the color indigo.) are the ones with random network. However, the fundamental setup measures, such as a number of external inputs and outdegree, were kept identical. Figure \ref{charlie} shows the plot that illustrates external input versus average rate. It can be said that the system is primarily input-driven. However, the target rate is approximated around the point $\nu_{ext} = 76$, creating a small plato. 
+Now that we have formulated our homeostatic steps, let's look at the results obtained. First, notice that there are more than one set of points. The reason is to be able to keep the 2D locality as a comparison element. The two simulations are run simultaneously. The simulations are named by the aviation alphabet to keep track of them more manageable when we have more than a few setups. The simulations indicated by the color yellow have a 2D Gaussian local structure. The indicated by the color indigo are the ones with random network. However, the fundamental setup measures, such as a number of external inputs and outdegree, were kept identical. Figure \ref{charlie} shows the plot that illustrates external input versus average rate. It can be said that the system is primarily input-driven. However, the target rate is approximated around the point $\nu_{ext} = 76$, creating a small plato. 
 \begin{figure}[H] 
     \centering
-    \includegraphics[width=0.8\linewidth]{nuext_vs_activity_charlie.pdf}
+    \includegraphics[width=0.8\linewidth]{nuext_vs_activity_charlie_legended.pdf}
     \caption{$\nu_{ext}$ vs Rate (Hz).}
     \label{charlie}
 \end{figure}
@@ -257,7 +258,7 @@ In order to observe the evolution of $J_i$, it is given in Figure \ref{charlie76
     \caption{ J (mV) vs Time (ms)}
     \label{charlie76alphavstime}
 \end{figure}
-Also, the Figure given in \ref{charlie76histogram} illustrates the final distribution of $J_i$'s. This plot tells us that a considerable amount of connnections die out, and there is a Gaussian-like distribution of coupling strengths.
+Also, the Figure given in \ref{charlie76histogram} illustrates the final distribution of $J_ij$'s. This plot tells us that a considerable amount of connnections die out, and there is a Gaussian-like distribution of coupling strengths.
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.8\linewidth]{nu_ext_76j_dist.pdf}
@@ -291,7 +292,7 @@ The adaptation of the external synaptic coupling strengths is also implemented. 
 
 \begin{figure}[H] 
     \centering
-    \includegraphics[width=0.8\linewidth]{nuext_vs_activity_foxtrot.pdf}
+    \includegraphics[width=0.8\linewidth]{nuext_vs_activity_foxtrot_legended.pdf}
     \caption{$\nu_{ext}$ vs Rate (Hz) for external adaptation enabled case.}
     \label{foxtrot}
 \end{figure}
